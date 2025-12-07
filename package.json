@@ -7,11 +7,13 @@
     "build": "tsc -p tsconfig.json",
     "dev": "ts-node-dev --respawn --transpile-only src/core/server.ts",
     "start": "node dist/core/server.js",
+    "start:env": "dotenv -e .env -- node dist/core/server.js",
     "test": "jest --coverage"
   },
   "dependencies": {
     "express": "^4.18.2",
     "dotenv": "^16.0.3",
+    "zod": "^3.22.0",
     "winston": "^3.8.2"
   },
   "devDependencies": {
@@ -24,6 +26,7 @@
     "ts-jest": "^29.1.0",
     "@types/jest": "^29.5.0",
     "supertest": "^6.3.3",
-    "@types/supertest": "^2.0.12"
+    "@types/supertest": "^2.0.12",
+    "dotenv-cli": "^7.1.0"
   }
 }
